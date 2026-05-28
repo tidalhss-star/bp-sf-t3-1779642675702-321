@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정보 — 마포 서버 웜업 & PBN 빌더</title>
+<meta name="description" content="마포에서 가장 강력한 서버 웜업. PBN 빌더가 직접 설계하는 Tier3 네트워크. 약한 링크는 없다. 010-6279-0862">
+<meta name="keywords" content="서버 웜업, PBN 빌더, 마포, 링크 빌딩, Tier3 PBN, 웜업 전문, 백링크, 파워 빌더, 사이트 강화, 마포 서버">
+<link rel="canonical" href="https://sf-t3-1779642675702-321.pages.dev/">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-neon-void">
+<meta property="og:title" content="정보 — 마포 서버 웜업 & PBN 빌더 | 틀은 깨라고 있는 거다">
+<meta property="og:description" content="약한 링크는 접는다. PBN 빌더가 직접 만드는 강철 서버 웜업. 전화 010-6279-0862">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sf-t3-1779642675702-321.pages.dev/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Reset & Base — Brutalist Zero-Fucks */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: 'Arial Black', 'Impact', sans-serif; background: #0a0a0a; color: #f0f0f0; line-height: 1.4; min-height: 100vh; overflow-x: hidden; }
+
+/* Typography — oversized, raw, aggressive */
+h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; }
+h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); line-height: 0.9; margin-bottom: 1rem; color: #ff2a2a; text-shadow: 4px 4px 0 #000, -2px -2px 0 #00ff88; }
+h2 { font-size: clamp(2rem, 5vw, 3.5rem); border-left: 8px solid #ff2a2a; padding-left: 1rem; margin: 2rem 0 1.5rem; }
+h3 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); color: #ffaa00; }
+p, li, blockquote { font-family: 'Courier New', monospace; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem; }
+a { color: #00ff88; text-decoration: underline wavy 2px; transition: all 0.2s; }
+a:hover { color: #ff2a2a; background: #00ff88; padding: 0.1rem 0.3rem; }
+
+/* Layout — asymmetric full bleed */
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+.site-header { background: #111; border-bottom: 6px solid #ff2a2a; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+.nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 1.2rem; font-weight: bold; text-transform: uppercase; text-decoration: none; color: #fff; padding: 0.5rem 0; border-bottom: 3px solid transparent; }
+.nav-links a:hover { border-bottom-color: #ff2a2a; color: #ff2a2a; background: none; }
+.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+.hamburger span { width: 30px; height: 4px; background: #fff; display: block; }
+.tel-link { font-size: 1.3rem; font-weight: bold; color: #00ff88; background: #1a1a1a; padding: 0.5rem 1rem; border: 2px solid #00ff88; text-decoration: none; white-space: nowrap; }
+.tel-link:hover { background: #00ff88; color: #000; }
+
+.hero { padding: 4rem 0; border-bottom: 4px dashed #ff2a2a; margin-bottom: 3rem; }
+.hero h1 { max-width: 900px; }
+.hero p { font-size: 1.4rem; border-left: 4px solid #00ff88; padding-left: 1rem; margin-top: 1rem; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0; }
+.card { background: #1a1a1a; padding: 2rem; border: 3px solid #333; transition: 0.3s; }
+.card:hover { border-color: #ff2a2a; transform: translateY(-4px); }
+.card h3 { margin-bottom: 1rem; }
+.card a { display: inline-block; margin-top: 1rem; }
+
+.faq { margin: 3rem 0; }
+.faq-item { border-bottom: 2px solid #333; padding: 1.5rem 0; }
+.faq-item h3 { cursor: pointer; position: relative; padding-right: 2rem; }
+.faq-item h3::after { content: '+'; position: absolute; right: 0; top: 0; font-size: 2rem; color: #ff2a2a; }
+.faq-item p { display: none; margin-top: 1rem; }
+.faq-item.active p { display: block; }
+.faq-item.active h3::after { content: '−'; }
+
+.site-footer { background: #111; border-top: 6px solid #00ff88; padding: 2rem 0; margin-top: 4rem; text-align: center; }
+.site-footer p { margin-bottom: 0.5rem; }
+
+@media (max-width: 768px) {
+ .nav-links { display: none; flex-direction: column; width: 100%; padding: 1rem 0; gap: 1rem; }
+ .nav-links.active { display: flex; }
+ .hamburger { display: flex; }
+ .hero h1 { font-size: 2.5rem; }
+ .hero p { font-size: 1.1rem; }
+ .tel-link { font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" style="text-decoration: none; color: #fff; font-size: 1.8rem; font-weight: 900;">PBN</a>
+    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">홈</a></li>
+      <li><a href="/info">정보</a></li>
+      <li><a href="/work">작업</a></li>
+      <li><a href="/contact">연락</a></li>
+    </ul>
+    <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>정보<br>마포 서버 웜업<br>PBN 빌더의 진실</h1>
+    <p>링크 빌딩은 예술이 아니다. 그냥 강철로 때리는 거다. 마포에서 우리가 하는 일을 설명한다.</p>
+  </section>
+
+  <section>
+    <h2>왜 마포인가</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>지리적 이점</h3>
+        <p>홍대, 상암, 공덕 — 마포는 디지털 허브의 중심이다. 서버 웜업을 위한 최적의 네트워크 거점. 다른 지역은 따라올 수 없는 인프라.</p>
+      </div>
+      <div class="card">
+        <h3>로컬 파워</h3>
+        <p>5년간 마포에서만 200개 이상의 PBN 구축. 지역 업체, 스타트업, 대행사까지 모두 우리 네트워크에 연결되어 있다.</p>
+        <a href="tel:01062790862">전화로 확인 →</a>
+      </div>
+      <div class="card">
+        <h3>경쟁자와의 차이</h3>
+        <p>대부분의 업체는 Tier1만 판다. 우리는 Tier3 PBN을 직접 굴린다. 약한 사이트는 만들지 않는다. 버려라, 아니면 강철로 만들어라.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>서버 웜업이란?</h2>
+    <p style="font-size: 1.3rem; border-left: 4px solid #ff2a2a; padding-left: 1rem; margin: 1.5rem 0;">
+      서버 웜업은 사이트에 생명을 불어넣는 과정이다. 도메인 권위, 백링크 속도, 트래픽 패턴 — 모든 것을 동시에 훈련시킨다. PBN 빌더는 이 과정을 자동화하고 강화한다. 틀에 박힌 웜업은 없다. 각 사이트마다 다른 전략, 다른 속도, 다른 강도.
+    </p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>실시간 모니터링</h3>
+        <p>24시간 서버 상태 체크. 지연, 다운, 오류 — 모든 것을 즉시 감지하고 대응. 당신의 사이트가 죽는 순간 우리가 살린다.</p>
+      </div>
+      <div class="card">
+        <h3>맞춤형 PBN</h3>
+        <p>기성품 링크는 없다. 업종, 지역, 경쟁 강도에 따라 PBN을 처음부터 설계. 마포 지역 사이트는 특히 로컬 시그널을 극대화.</p>
+      </div>
+      <div class="card">
+        <h3>성과 측정</h3>
+        <p>순위, 트래픽, 인덱싱 속도. 우리는 숫자로 말한다. 약한 결과는 거절한다. 당신이 원하는 건 강력한 도메인 파워뿐이다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>PBN 빌더가 말하는 진실</h2>
+    <blockquote style="border-left: 6px solid #00ff88; padding: 1.5rem; background: #1a1a1a; font-size: 1.3rem; margin: 2rem 0;">
+      "대부분의 PBN은 쓰레기다. 도메인 나이만 많고 콘텐츠는 텅 빈 사이트, 링크는 스팸. 그런 걸로 웜업한다고? 웃기지 마라. 진짜 PBN은 살아있는 네트워크다. 마포에서 우리가 만드는 건 강철 링크, 플라스틱이 아니다."
+    </blockquote>
+  </section>
+
+  <section class="faq">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>서버 웜업은 얼마나 걸리나요?</h3>
+      <p>기본 2주, 최대 4주. 사이트 상태에 따라 다르다. 약한 사이트는 먼저 강화부터 한다. 시간을 단축하고 싶으면 강한 출발을 해야 한다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>마포 외 지역도 가능한가요?</h3>
+      <p>가능하다. 하지만 우리는 로컬 시그널에 강점이 있다. 마포, 서대문, 용산 — 이 지역이 가장 빠르고 강력하다. 다른 지역은 추가 시간이 필요할 수 있다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>PBN 빌더만의 차별점은?</h3>
+      <p>우리는 직접 서버를 운영한다. 다른 업체처럼 중개만 하지 않는다. 실제로 우리 손으로 도메인을 등록하고, 콘텐츠
+</body>
+</html>

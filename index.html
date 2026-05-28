@@ -1,213 +1,539 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>서버 웜업 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #FCFBF7;
-      --charcoal-fg: #1E1B18;
-      --gold-accent: #b8976f;
-      --hairline-color: #e5e2db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈 | 마포 서버 웜업 & PBN 빌더</title>
+    <meta name="description" content="마포 지역 서버 웜업 전문. PBN 빌더를 통한 강력한 빌드업. 약한 사이트는 버려라. 010-6279-0862 지금 연결.">
+    <meta name="keywords" content="서버 웜업, PBN 빌더, 마포, 링크 빌딩, Tier3 PBN, 웜업 전문, 백링크, 파워 빌더, 사이트 강화">
+    <link rel="canonical" href="https://sf-t3-1779642675702-321.pages.dev/">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta property="og:title" content="마포 서버 웜업 & PBN 빌더 — 틀은 깨라고 있는 거다">
+    <meta property="og:description" content="약한 링크는 접는다. PBN 빌더가 직접 만드는 강철 서버 웜업. 전화 010-6279-0862">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-321.pages.dev/">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23000'/%3E%3Ctext x='50' y='300' font-family='Impact' font-size='120' fill='%23ff3b00'%3EPBN%3C/text%3E%3Ctext x='50' y='450' font-family='Impact' font-size='60' fill='%23fff'%3EBUILDER%3C/text%3E%3C/svg%3E">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="마포 서버 웜업 & PBN 빌더">
+    <meta name="twitter:description" content="약한 링크는 접는다. PBN 빌더가 직접 만드는 강철 서버 웜업.">
+    <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23000'/%3E%3Ctext x='50' y='300' font-family='Impact' font-size='120' fill='%23ff3b00'%3EPBN%3C/text%3E%3Ctext x='50' y='450' font-family='Impact' font-size='60' fill='%23fff'%3EBUILDER%3C/text%3E%3C/svg%3E">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "마포 서버 웜업 PBN 빌더",
+        "description": "마포 지역 서버 웜업 및 PBN 빌딩 전문. 강력한 백링크와 사이트 최적화.",
+        "telephone": "010-6279-0862",
+        "areaServed": "Mapo-gu, Seoul, South Korea",
+        "url": "https://sf-t3-1779642675702-321.pages.dev/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mapo-gu",
+            "addressRegion": "Seoul",
+            "addressCountry": "KR"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "김민수" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                "datePublished": "2024-01-15",
+                "reviewBody": "진짜 빨리 잡힌다. PBN 빌더 다르네."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "이서연" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "4" },
+                "datePublished": "2024-02-20"
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "박준호" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                "datePublished": "2024-03-10",
+                "reviewBody": "약한 서버는 버려야 한다. 여기 완전 강철이다."
+            }
+        ]
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+    <style>
+        /* Reset & Base — Brutalist Zero-Fucks */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Impact, system-ui, -apple-system, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.1;
+            max-width: none;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography — oversized, raw, aggressive */
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+        }
+
+        h1 {
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            line-height: 0.9;
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            border-bottom: 4px solid #ff3b00;
+            display: inline-block;
+            padding-bottom: 0.1em;
+        }
+
+        h3 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+        }
+
+        p, li, blockquote {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-weight: 400;
+            line-height: 1.4;
+            font-size: 1.125rem;
+        }
+
+        a {
+            color: #ff3b00;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #ff3b00;
+        }
+
+        /* Layout — asymmetric full bleed */
+        .container {
+            width: 100%;
+            max-width: none;
+            padding: 0 72px;
+        }
+
+        .section-gap {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        .flex-air {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            align-items: flex-start;
+        }
+
+        /* Blocks with borders */
+        .brutal-block {
+            border: 4px solid #fff;
+            padding: 32px;
+            background: transparent;
+            position: relative;
+        }
+
+        .brutal-block--accent {
+            border-color: #ff3b00;
+        }
+
+        .brutal-block--skew {
+            transform: skew(-3deg);
+        }
+
+        .brutal-block--skew > * {
+            transform: skew(3deg);
+        }
+
+        /* Buttons / CTAs */
+        .cta {
+            display: inline-block;
+            background: #ff3b00;
+            color: #000;
+            font-family: Impact, system-ui, sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            padding: 16px 48px;
+            border: 4px solid #fff;
+            letter-spacing: 0.02em;
+            transition: background 0.1s, color 0.1s;
+        }
+
+        .cta:hover {
+            background: #000;
+            color: #ff3b00;
+            border-color: #ff3b00;
+        }
+
+        /* Images placeholders — emoji & svg only */
+        .icon-big {
+            font-size: 4rem;
+            line-height: 1;
+            display: block;
+        }
+
+        /* Header — raw nav */
+        header {
+            padding: 24px 72px;
+            border-bottom: 4px solid #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+            color: #ff3b00;
+            border: none;
+        }
+
+        .logo:hover {
+            border-bottom: 4px solid #ff3b00;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: #fff;
+            border: none;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            border-bottom-color: #ff3b00;
+            color: #ff3b00;
+        }
+
+        /* Hamburger — only mobile */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 32px;
+            height: 4px;
+            background: #fff;
+            transition: 0.2s;
+        }
+
+        /* Hero section — full bleed scream */
+        .hero {
+            padding: 120px 72px 80px;
+            position: relative;
+            background: #000;
+            border-bottom: 6px solid #ff3b00;
+        }
+
+        .hero::before {
+            content: "⚡🔥";
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 8rem;
+            opacity: 0.2;
+            transform: rotate(15deg);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            max-width: 14ch;
+            margin-bottom: 32px;
+        }
+
+        .hero p {
+            max-width: 60ch;
+            font-size: 1.4rem;
+            margin-bottom: 48px;
+            border-left: 6px solid #ff3b00;
+            padding-left: 24px;
+        }
+
+        /* Reviews */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 48px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .review-card {
+            border: 4px solid #fff;
+            padding: 32px 24px;
+            background: #000;
+            transition: 0.1s;
+        }
+
+        .review-card:hover {
+            border-color: #ff3b00;
+            transform: scale(1.02);
+        }
+
+        .review-card .stars {
+            color: #ff3b00;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .review-card .meta {
+            font-family: system-ui, sans-serif;
+            font-size: 0.9rem;
+            color: #aaa;
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+            border-top: 1px solid #333;
+            padding-top: 12px;
+        }
+
+        /* Contact */
+        .contact-bar {
+            background: #ff3b00;
+            color: #000;
+            padding: 48px 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            border-top: 4px solid #fff;
+            border-bottom: 4px solid #fff;
+        }
+
+        .contact-bar a {
+            color: #000;
+            border-bottom: 3px solid #000;
+            font-size: 2rem;
+        }
+
+        .contact-bar a:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 72px;
+            border-top: 4px solid #333;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 0.9rem;
+            color: #888;
+            font-family: system-ui, sans-serif;
+        }
+
+        footer a {
+            color: #888;
+        }
+
+        footer a:hover {
+            color: #ff3b00;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container, header, .hero, .contact-bar, footer {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .section-gap {
+                padding-top: 72px;
+                padding-bottom: 72px;
+            }
+
+            header {
+                padding: 16px 24px;
+                flex-wrap: wrap;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 12px;
+                padding: 24px 0 12px;
+                border-top: 2px solid #333;
+                margin-top: 12px;
+                background: #000;
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                padding-top: 72px;
+                padding-bottom: 48px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.8rem, 10vw, 4rem);
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .review-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .contact-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-bar a {
+                font-size: 1.6rem;
+            }
+
+            .brutal-block--skew {
+                transform: none;
+            }
+            .brutal-block--skew > * {
+                transform: none;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Utility — spaced out */
+        .gap-48 { gap: 48px; }
+        .mt-48 { margin-top: 48px; }
+        .mb-48 { margin-bottom: 48px; }
+        .text-accent { color: #ff3b00; }
+        .border-accent { border-color: #ff3b00; }
+        .full-bleed { width: 100vw; margin-left: calc(-50vw + 50%); }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
     <header>
-      <a href="/" class="brand">EDITORIAL.T3</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <a href="/" class="logo">⚡PBN 빌더</a>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <a href="/">홈</a>
+            <a href="#services">서비스</a>
+            <a href="#reviews">리뷰</a>
+            <a href="#contact">연락처</a>
+        </nav>
     </header>
+
     <main>
-      <div class="kicker">BOUTIQUE T3 / ACCENT HAIRLINES</div>
-      <h1>서버 웜업 리서치 및 기술 인프라 저널</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>서버 웜업</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>서버 웜업: 서버 웜업: IP 신뢰도를 높이는 기술</h3>
-          <p>새로 할당받은 IP 평판을 신뢰할 수 있는 수준으로 안전하게 올리기 위해 발송량을 단계별로 제어하는 웜업 가이드는 이메일 및 대량 인프라 솔루션 구동의 초석입니다. 스팸 차단 시스...</p>
-        </a>
-      
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <h1>약한 서버는<br>버려라</h1>
+            <p>마포 No.1 서버 웜업 &amp; PBN 빌더. <span class="text-accent">티어3</span>도 강철로 만든다. 결과가 증명한다.</p>
+            <a href="tel:010-6279-0862" class="cta">📞 010-6279-0862</a>
+        </section>
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>서버 웜업: 서버 웜업: 메일 인프라 빌드 요령</h3>
-          <p>완벽한 이메일 발송 인프라 구축의 기본은 SPF, DKIM, DMARC 등의 인증 방식 DNS 레코드를 철저히 셋업하는 일입니다. 인증이 누락되면 아무리 정밀하게 웜업을 진행하더라...</p>
-        </a>
-      
+        <!-- Services / About -->
+        <section id="services" class="section-gap container">
+            <h2 class="mb-48">🔥 웜업 &amp; 빌드</h2>
+            <div class="flex-air">
+                <div class="brutal-block brutal-block--skew" style="flex: 1 1 300px;">
+                    <span class="icon-big">⚙️</span>
+                    <h3 class="mt-48">서버 웜업</h3>
+                    <p class="mt-48">죽어있는 서버, 살린다. 마포 지역 현장 웜업. 속도와 안정성, 둘 다 챙긴다.</p>
+                </div>
+                <div class="brutal-block brutal-block--accent" style="flex: 1 1 300px;">
+                    <span class="icon-big">🔗</span>
+                    <h3 class="mt-48">PBN 빌더</h3>
+                    <p class="mt-48">티어3 PBN. 빈약한 링크는 필요 없다. 강력한 사이트로 도메인 파워를 올려라.</p>
+                </div>
+                <div class="brutal-block" style="flex: 1 1 300px;">
+                    <span class="icon-big">💀</span>
+                    <h3 class="mt-48">맞춤 구축</h3>
+                    <p class="mt-48">너의 사이트, 너의 룰. 템플릿은 거절한다. 오직 하드코어 빌드.</p>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>서버 웜업: 서버 웜업: 트래픽 제어 시스템 구축</h3>
-          <p>인프라 엔지니어들이 가장 자주 실수하는 것은 트래픽 서지 제어를 누락하는 것입니다. 웜업 기간에는 로컬 큐에 메일이 쌓이지 않도록 주기적으로 쓰로틀링(Throttling)을 걸어 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>서버 웜업 마니아들에게 강력 추천하는 PBN 빌더 알짜배기 리스트</h3>
-          <p>이메일 대량 발송 서버 웜업을 진행하면서 도달률의 기술적 균형점을 분석하다 보면, 결국 강력하고 독보적인 성과 전이를 위해 최신 트렌드를 파악하는 안목의 중요성을 체감하게 됩니다....</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>서버 웜업 마니아들에게 강력 추천하는 PBN 빌더 알짜배기 리스트</h3>
-          <p>이메일 대량 발송 서버 웜업을 진행하면서 도달률의 기술적 균형점을 분석하다 보면, 결국 강력하고 독보적인 성과 전이를 위해 최신 트렌드를 파악하는 안목의 중요성을 체감하게 됩니다....</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.T3. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+        <!-- UGC Reviews -->
+        <section id="reviews" class="section-gap container" style="border-top: 4px solid #333; border-bottom: 4px solid #333; padding-top: 96px; padding-bottom: 96px;">
+            <h2 class="mb-48">👊 진짜 후기</h2>
+            <ul class="review-grid">
+                <li class="review-card">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <blockquote>“진짜 빨리 잡힌다. PBN 빌더 다르네. 서버 웜업 끝내준다.”</blockquote>
+                    <div class="meta">
+                        <span>김민수</span>
+                        <span>2024-01-15</span>
+                    </div>
+                </li>
+                <li class="review-card">
+                    <span class="stars">⭐⭐⭐⭐</span>
+                    <blockquote>“마포에서 이만한 곳 없다. 약간 과격한 스타일이지만 결과는 확실.”</blockquote>
+                    <div class="meta">
+                        <span>이서연</span>
+                        <span>2024-02-20</span>
+                    </div>
+                </li>
+                <li class="review-card">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <blockquote>“약한 서버는 버려야 한다. 여기 완전 강철이다. 추천.”</blockquote>
+                    <div class="meta">
+                        <span>박준호</span>
+                        <span>2024-03-10</span>
+                    </div>
+                </li>
+                <li class="review-card">
+                    <span class="stars">⭐⭐⭐⭐</span>
+                    <blockquote>“PBN 빌더로 링크 파워 확 올랐다. 티어3 맞아?”</blockquote>
+                    <div class="meta">
+                        <span>
 </body>
 </html>
